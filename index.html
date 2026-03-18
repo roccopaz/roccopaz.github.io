@@ -6,19 +6,19 @@
   <title>Rocco Paz — Portfolio</title>
   <style>
     :root {
-      --bg: #0a0a0f;
-      --surface: #111118;
-      --card: #13131a;
-      --border: #1e1e2e;
-      --accent: #3b82f6;
-      --accent2: #60a5fa;
-      --accent3: #818cf8;
-      --text: #e8e8f0;
-      --muted: #64748b;
-      --green: #22d3ee;
-      --yellow: #fbbf24;
+      --bg: #0a0005;
+      --surface: #110008;
+      --card: #150008;
+      --border: #2e1018;
+      --accent: #8B1A1A;
+      --accent2: #C9A84C;
+      --accent3: #C9A84C;
+      --text: #f0ece8;
+      --muted: #7a6a6a;
+      --green: #C9A84C;
+      --yellow: #C9A84C;
       --red: #f87171;
-      --purple: #a78bfa;
+      --purple: #C9A84C;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,7 +51,7 @@
       text-decoration: none; border: 1px solid var(--border); color: var(--text);
       background: transparent; transition: all .2s;
     }
-    .nav-btn:hover { border-color: var(--accent); color: var(--accent2); }
+    .nav-btn:hover { border-color: var(--accent2); color: var(--accent2); }
 
     /* ── HERO ── */
     .hero {
@@ -63,7 +63,7 @@
       display: inline-flex; align-items: center; gap: 7px;
       font-size: 12px; padding: 5px 13px; border-radius: 99px; font-weight: 600;
     }
-    .badge-blue  { background: rgba(59,130,246,.12); border: 1px solid rgba(59,130,246,.3); color: var(--accent2); }
+    .badge-blue  { background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.3); color: var(--accent2); }
     .badge-green { background: rgba(34,211,238,.1);  border: 1px solid rgba(34,211,238,.25); color: var(--green); }
     .badge-dot { width: 6px; height: 6px; border-radius: 50%; }
     .dot-green { background: var(--green); animation: pulse 2s infinite; }
@@ -74,7 +74,7 @@
     h1 {
       font-size: clamp(34px, 5.5vw, 58px);
       font-weight: 800; letter-spacing: -1px; margin-bottom: 18px;
-      background: linear-gradient(130deg, #fff 20%, var(--accent3));
+      background: linear-gradient(130deg, #fff 30%, #C9A84C);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .hero-sub { font-size: 17px; color: var(--muted); max-width: 540px; margin: 0 auto 36px; }
@@ -85,8 +85,8 @@
       padding: 12px 22px; border-radius: 10px; font-size: 15px; font-weight: 600;
       text-decoration: none; transition: all .2s; border: none; cursor: pointer;
     }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: #2563eb; transform: translateY(-1px); }
+    .btn-primary { background: #8B1A1A; color: #fff; }
+    .btn-primary:hover { background: #7a1515; transform: translateY(-1px); }
     .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--text); }
     .btn-ghost:hover { border-color: var(--accent); color: var(--accent2); }
 
@@ -143,7 +143,7 @@
     .proj-desc { font-size: 13.5px; color: var(--muted); flex: 1; line-height: 1.65; }
     .tag-row { display: flex; flex-wrap: wrap; gap: 7px; }
     .tag {
-      font-size: 11px; background: rgba(96,165,250,.1); color: var(--accent2);
+      font-size: 11px; background: rgba(201,168,76,.1); color: var(--accent2);
       padding: 3px 9px; border-radius: 6px;
     }
     .proj-link { font-size: 13px; color: var(--accent2); margin-top: 4px; }
@@ -203,6 +203,11 @@
 
 <!-- HERO -->
 <div class="hero">
+  <div style="margin-bottom:20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Texas_State_University_seal.svg"
+         alt="Texas State University"
+         style="width:90px;height:90px;opacity:0.85;filter:drop-shadow(0 0 14px rgba(201,168,76,0.35));" />
+  </div>
   <div class="badge-row">
     <span class="badge badge-green"><span class="badge-dot dot-green"></span>Open to Internships</span>
     <span class="badge badge-blue">Texas State University · Senior</span>
@@ -228,7 +233,7 @@
     </div>
     <div class="stat-grid">
       <div class="stat">
-        <div class="stat-num">TSU</div>
+        <div class="stat-num">CIS</div>
         <div class="stat-label">Major</div>
       </div>
       <div class="stat">
@@ -383,52 +388,52 @@
           <div>
             <div style="font-size:36px;margin-bottom:8px;">🎬</div>
             <h3 style="font-size:22px;font-weight:800;margin-bottom:4px;">AI Content Clipping Pipeline</h3>
-            <span style="font-size:12px;background:rgba(96,165,250,.1);color:#60a5fa;padding:3px 10px;border-radius:6px;">Google APIs · AI Agents · Automation</span>
+            <span style="font-size:12px;background:rgba(201,168,76,.1);color:#C9A84C;padding:3px 10px;border-radius:6px;">Google APIs · AI Agents · Automation</span>
           </div>
           <button onclick="document.getElementById('content-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
         </div>
         <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">Built a <strong style="color:#e8e8f0;">fully automated video content pipeline</strong> that takes raw footage from Google Drive and produces ready-to-publish YouTube Shorts and TikTok clips — with AI handling the analysis, selection, and packaging.</p>
         <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🔄 How the Pipeline Works</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔄 How the Pipeline Works</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;display:flex;gap:12px;">
-              <span style="background:rgba(59,130,246,.2);color:#60a5fa;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 1</span>
+              <span style="background:rgba(139,26,26,.25);color:#C9A84C;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 1</span>
               <div style="font-size:13.5px;color:#94a3b8;"><strong style="color:#e8e8f0;">Upload</strong> — Raw source videos dropped into Google Drive Incoming Source Clips folder via Drive API</div>
             </div>
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;display:flex;gap:12px;">
-              <span style="background:rgba(59,130,246,.2);color:#60a5fa;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 2</span>
+              <span style="background:rgba(139,26,26,.25);color:#C9A84C;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 2</span>
               <div style="font-size:13.5px;color:#94a3b8;"><strong style="color:#e8e8f0;">AI Analysis</strong> — Agent uses FFmpeg + Whisper to extract frames, detect silence, transcribe audio, and generate contact sheets</div>
             </div>
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;display:flex;gap:12px;">
-              <span style="background:rgba(59,130,246,.2);color:#60a5fa;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 3</span>
+              <span style="background:rgba(139,26,26,.25);color:#C9A84C;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 3</span>
               <div style="font-size:13.5px;color:#94a3b8;"><strong style="color:#e8e8f0;">Clip Selection</strong> — AI recommends best timestamps for hooks, highlights, and viral moments</div>
             </div>
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;display:flex;gap:12px;">
-              <span style="background:rgba(59,130,246,.2);color:#60a5fa;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 4</span>
+              <span style="background:rgba(139,26,26,.25);color:#C9A84C;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 4</span>
               <div style="font-size:13.5px;color:#94a3b8;"><strong style="color:#e8e8f0;">Export</strong> — Draft clips rendered with FFmpeg, auto-uploaded to Draft Exports folder in Drive</div>
             </div>
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;display:flex;gap:12px;">
-              <span style="background:rgba(59,130,246,.2);color:#60a5fa;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 5</span>
+              <span style="background:rgba(139,26,26,.25);color:#C9A84C;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap;">Step 5</span>
               <div style="font-size:13.5px;color:#94a3b8;"><strong style="color:#e8e8f0;">Tracking</strong> — Google Sheets logs every clip (status, timestamps, notes) via Sheets API</div>
             </div>
           </div>
         </div>
         <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Google Drive API</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Google Sheets API</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Google Docs API</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">FFmpeg</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Whisper (Speech-to-Text)</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Claude AI</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Python</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Bash Scripts</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">OAuth 2.0</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Google Drive API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Google Sheets API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Google Docs API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">FFmpeg</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Whisper (Speech-to-Text)</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Claude AI</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Python</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Bash Scripts</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">OAuth 2.0</span>
           </div>
         </div>
         <div>
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">💡 Key Concepts Applied</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">💡 Key Concepts Applied</div>
           <ul style="color:#94a3b8;font-size:14px;line-height:2;padding-left:18px;">
             <li>OAuth 2.0 authentication for Google Workspace API access</li>
             <li>Automated file I/O across Google Drive folder structure via REST API</li>
@@ -448,13 +453,13 @@
           <div>
             <div style="font-size:36px;margin-bottom:8px;">🔒</div>
             <h3 style="font-size:22px;font-weight:800;margin-bottom:4px;">Secure AI Service Architecture</h3>
-            <span style="font-size:12px;background:rgba(96,165,250,.1);color:#60a5fa;padding:3px 10px;border-radius:6px;">Security · OAuth · DevSecOps</span>
+            <span style="font-size:12px;background:rgba(201,168,76,.1);color:#C9A84C;padding:3px 10px;border-radius:6px;">Security · OAuth · DevSecOps</span>
           </div>
           <button onclick="document.getElementById('security-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
         </div>
         <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">When deploying AI systems that interact with real accounts and APIs, security is not optional. I applied <strong style="color:#e8e8f0;">service identity isolation</strong> — a core DevSecOps principle — to keep personal credentials completely separate from the AI infrastructure.</p>
         <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🛡️ What I Implemented</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🛡️ What I Implemented</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:16px;">
               <div style="font-weight:700;color:#e8e8f0;margin-bottom:6px;">Dedicated Service Account</div>
@@ -475,15 +480,15 @@
           </div>
         </div>
         <div>
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">📚 Security Concepts Demonstrated</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">📚 Security Concepts Demonstrated</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Principle of Least Privilege</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Service Identity Isolation</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">OAuth 2.0</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Credential Management</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Blast Radius Containment</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Secrets Hygiene</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">DevSecOps</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Principle of Least Privilege</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Service Identity Isolation</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">OAuth 2.0</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Credential Management</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Blast Radius Containment</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Secrets Hygiene</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">DevSecOps</span>
           </div>
         </div>
       </div>
@@ -496,7 +501,7 @@
           <div>
             <div style="font-size:36px;margin-bottom:8px;">⚡</div>
             <h3 style="font-size:22px;font-weight:800;margin-bottom:4px;">OpenClaw VPS AI System</h3>
-            <span style="font-size:12px;background:rgba(96,165,250,.1);color:#60a5fa;padding:3px 10px;border-radius:6px;">AI · DevOps · Automation</span>
+            <span style="font-size:12px;background:rgba(201,168,76,.1);color:#C9A84C;padding:3px 10px;border-radius:6px;">AI · DevOps · Automation</span>
           </div>
           <button onclick="document.getElementById('openclaw-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
         </div>
@@ -506,7 +511,7 @@
         </p>
 
         <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🏗️ Architecture</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🏗️ Architecture</div>
           <ul style="color:#94a3b8;font-size:14px;line-height:2;padding-left:18px;">
             <li><strong style="color:#e8e8f0;">OpenClaw Gateway</strong> — Node.js-based orchestration runtime managing agent lifecycles, routing, and memory</li>
             <li><strong style="color:#e8e8f0;">4 Specialized AI Agents</strong> — Each with distinct roles, models, memory, and channel bindings</li>
@@ -517,7 +522,7 @@
         </div>
 
         <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🤖 Agent Roster</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🤖 Agent Roster</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
             <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;">
               <div style="font-weight:700;margin-bottom:4px;">⚡ Roni</div>
@@ -539,24 +544,24 @@
         </div>
 
         <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Linux Ubuntu 24.04</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Node.js v22</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Claude AI (Anthropic)</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">OpenAI Codex</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Discord API</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Google Workspace API</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">FFmpeg</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Python</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Bash Scripting</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">REST APIs</span>
-            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Git / GitHub</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Linux Ubuntu 24.04</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Node.js v22</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Claude AI (Anthropic)</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">OpenAI Codex</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Discord API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Google Workspace API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">FFmpeg</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Python</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Bash Scripting</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">REST APIs</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Git / GitHub</span>
           </div>
         </div>
 
         <div style="margin-bottom:28px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">💡 What I Built & Learned</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">💡 What I Built & Learned</div>
           <ul style="color:#94a3b8;font-size:14px;line-height:2;padding-left:18px;">
             <li>Provisioned and secured a Linux VPS from scratch (SSH hardening, firewall, process management)</li>
             <li>Deployed and configured a multi-agent AI orchestration platform (OpenClaw)</li>
@@ -567,7 +572,7 @@
           </ul>
         </div>
 
-        <a href="https://github.com/roccopaz" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#3b82f6;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">View GitHub Profile ↗</a>
+        <a href="https://github.com/roccopaz" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#8B1A1A;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">View GitHub Profile ↗</a>
       </div>
     </div>
 
