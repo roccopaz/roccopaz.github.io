@@ -204,14 +204,14 @@
 <!-- HERO -->
 <div class="hero">
   <div style="margin-bottom:20px;">
-    <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Texas_State_University_seal.svg"
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Texas_State_University_seal.png/240px-Texas_State_University_seal.png"
          alt="Texas State University"
-         style="width:90px;height:90px;opacity:0.85;filter:drop-shadow(0 0 14px rgba(201,168,76,0.35));" />
+         style="width:100px;height:100px;border-radius:50%;box-shadow:0 0 20px rgba(201,168,76,0.4);" />
   </div>
   <div class="badge-row">
     <span class="badge badge-green"><span class="badge-dot dot-green"></span>Open to Internships</span>
     <span class="badge badge-blue">Texas State University · Senior</span>
-    <span class="badge badge-blue">🇺🇸 Veteran</span>
+    <span class="badge badge-blue"><strong>🇺🇸 U.S. VETERAN</strong></span>
   </div>
   <h1>Rocco Paz</h1>
   <p class="hero-sub">Computer Information Systems senior at <strong>Texas State University</strong> passionate about Cybersecurity and AI. Veteran bringing discipline and real-world perspective to tech.</p>
@@ -348,15 +348,16 @@
   </div>
 
   <!-- Row 2: 2 additional projects -->
-  <div style="margin-top:16px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:640px;">
+  <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;">
 
-    <div class="project-card" onclick="document.getElementById('content-modal').style.display='flex'" style="cursor:pointer;">
+    <div class="project-card" style="cursor:pointer;" onclick="document.getElementById('content-modal').style.display='flex'">
       <div class="proj-header">
         <div class="proj-icon">🎬</div>
         <span class="proj-lang">AI · Google APIs</span>
       </div>
       <div class="proj-name">AI Content Clipping Pipeline</div>
       <div class="proj-desc">Automated video-to-Shorts workflow using Google Drive, FFmpeg, and AI agents. Raw clips in → approved content out. <span style="color:var(--accent2);">Click to learn more →</span></div>
+      <div class="proj-link"><a href="https://github.com/roccopaz/ai-content-pipeline" target="_blank" style="color:var(--accent2);text-decoration:none;">github.com/roccopaz/ai-content-pipeline ↗</a></div>
       <div class="tag-row">
         <span class="tag">Google Drive API</span>
         <span class="tag">FFmpeg</span>
@@ -372,6 +373,7 @@
       </div>
       <div class="proj-name">Secure AI Service Architecture</div>
       <div class="proj-desc">Isolated service identity for AI infrastructure — dedicated OAuth account, scoped API permissions, encrypted credential storage. <span style="color:var(--accent2);">Click to learn more →</span></div>
+      <div class="proj-link"><a href="https://github.com/roccopaz/secure-ai-architecture" target="_blank" style="color:var(--accent2);text-decoration:none;">github.com/roccopaz/secure-ai-architecture ↗</a></div>
       <div class="tag-row">
         <span class="tag">OAuth 2.0</span>
         <span class="tag">Least Privilege</span>
