@@ -322,22 +322,105 @@
       <div class="proj-link">github.com/roccopaz/python-password-strength-checker ↗</div>
     </a>
 
-    <a class="project-card" href="https://github.com/roccopaz/roccopaz.github.io" target="_blank">
+    <div class="project-card openclaw-card" style="cursor:pointer;" onclick="document.getElementById('openclaw-modal').style.display='flex'">
       <div class="proj-header">
         <div class="proj-icon">⚡</div>
         <span class="proj-lang">AI · DevOps</span>
       </div>
       <div class="proj-name">OpenClaw VPS AI System</div>
-      <div class="proj-desc">Self-hosted multi-agent AI platform running on a Linux VPS. Orchestrates specialized AI agents (research, content, coding) via Discord, with persistent memory, cron scheduling, and Google Workspace integration.</div>
+      <div class="proj-desc">Self-hosted multi-agent AI platform on Linux VPS. Orchestrates specialized AI agents via Discord with persistent memory, cron scheduling, and Google Workspace integration. <span style="color:var(--accent2);">Click to learn more →</span></div>
       <div class="tag-row">
         <span class="tag">OpenClaw</span>
         <span class="tag">Multi-Agent AI</span>
         <span class="tag">Linux VPS</span>
         <span class="tag">Python</span>
         <span class="tag">Automation</span>
+        <span class="tag">Claude AI</span>
+        <span class="tag">Discord API</span>
       </div>
-      <div class="proj-link">github.com/roccopaz ↗</div>
-    </a>
+    </div>
+
+    <!-- OPENCLAW MODAL -->
+    <div id="openclaw-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)this.style.display='none'">
+      <div style="background:#13131a;border:1px solid #2a2a3a;border-radius:20px;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:36px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;">
+          <div>
+            <div style="font-size:36px;margin-bottom:8px;">⚡</div>
+            <h3 style="font-size:22px;font-weight:800;margin-bottom:4px;">OpenClaw VPS AI System</h3>
+            <span style="font-size:12px;background:rgba(96,165,250,.1);color:#60a5fa;padding:3px 10px;border-radius:6px;">AI · DevOps · Automation</span>
+          </div>
+          <button onclick="document.getElementById('openclaw-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
+        </div>
+
+        <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">
+          Deployed and operate a <strong style="color:#e8e8f0;">production multi-agent AI system</strong> on a Linux VPS — an always-on infrastructure where specialized AI agents collaborate autonomously to handle research, content creation, coding, and orchestration tasks.
+        </p>
+
+        <div style="margin-bottom:22px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🏗️ Architecture</div>
+          <ul style="color:#94a3b8;font-size:14px;line-height:2;padding-left:18px;">
+            <li><strong style="color:#e8e8f0;">OpenClaw Gateway</strong> — Node.js-based orchestration runtime managing agent lifecycles, routing, and memory</li>
+            <li><strong style="color:#e8e8f0;">4 Specialized AI Agents</strong> — Each with distinct roles, models, memory, and channel bindings</li>
+            <li><strong style="color:#e8e8f0;">Discord as Command Interface</strong> — Agents receive and respond to tasks through dedicated Discord channels</li>
+            <li><strong style="color:#e8e8f0;">Persistent Memory System</strong> — Agents retain context across sessions via structured markdown memory files</li>
+            <li><strong style="color:#e8e8f0;">Cron Scheduler</strong> — Automated recurring tasks (trend reports, content packs, reminders) on precise schedules</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:22px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🤖 Agent Roster</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;">
+              <div style="font-weight:700;margin-bottom:4px;">⚡ Roni</div>
+              <div style="font-size:12px;color:#64748b;">Orchestrator — planning, coordination, day-to-day ops</div>
+            </div>
+            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;">
+              <div style="font-weight:700;margin-bottom:4px;">🤖 Robo</div>
+              <div style="font-size:12px;color:#64748b;">Research — market analysis, competitor intelligence</div>
+            </div>
+            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;">
+              <div style="font-weight:700;margin-bottom:4px;">⭐ Star</div>
+              <div style="font-size:12px;color:#64748b;">Content — TikTok/YouTube Shorts strategy & clips</div>
+            </div>
+            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:14px;">
+              <div style="font-weight:700;margin-bottom:4px;">🦖 Yoshi</div>
+              <div style="font-size:12px;color:#64748b;">Engineering — coding, architecture, dashboards</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:22px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Linux Ubuntu 24.04</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Node.js v22</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Claude AI (Anthropic)</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">OpenAI Codex</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Discord API</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Google Workspace API</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">FFmpeg</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Python</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Bash Scripting</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">REST APIs</span>
+            <span style="background:rgba(96,165,250,.1);color:#60a5fa;padding:4px 11px;border-radius:6px;font-size:12px;">Git / GitHub</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#3b82f6;font-weight:700;margin-bottom:12px;">💡 What I Built & Learned</div>
+          <ul style="color:#94a3b8;font-size:14px;line-height:2;padding-left:18px;">
+            <li>Provisioned and secured a Linux VPS from scratch (SSH hardening, firewall, process management)</li>
+            <li>Deployed and configured a multi-agent AI orchestration platform (OpenClaw)</li>
+            <li>Integrated multiple third-party APIs: Discord, Google Drive/Docs/Sheets, Anthropic, OpenAI</li>
+            <li>Built automated content pipelines using FFmpeg for video processing</li>
+            <li>Designed agent memory architecture for cross-session context persistence</li>
+            <li>Implemented cron-based task scheduling for autonomous agent workflows</li>
+          </ul>
+        </div>
+
+        <a href="https://github.com/roccopaz" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#3b82f6;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">View GitHub Profile ↗</a>
+      </div>
+    </div>
 
   </div>
 </section>
