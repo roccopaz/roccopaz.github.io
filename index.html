@@ -207,7 +207,7 @@
   <div class="badge-row">
     <span class="badge badge-green"><span class="badge-dot dot-green"></span>Open to Internships</span>
     <span class="badge badge-blue">Texas State University · Senior</span>
-    <span class="badge badge-blue"><strong>VETERAN</strong></span>
+    <span class="badge badge-blue"><strong>🇺🇸 VETERAN</strong></span>
   </div>
   <h1>Rocco Paz</h1>
 
@@ -219,7 +219,7 @@
     <div class="about-text">
       <p>I'm a <strong>Computer Information Systems Senior at Texas State University</strong> based in Texas, focused on <strong>Cybersecurity and AI</strong>. I'm actively seeking internships where I can apply my technical skills and continue growing in the field.</p>
       <p>Before pursuing my degree, I served in the <strong>U.S. Military</strong> — which gave me a strong foundation in discipline, problem-solving under pressure, and working as part of a team. I bring that same mindset to every technical challenge.</p>
-      <p>My work spans security tooling (log analysis, intrusion detection concepts) and AI-assisted automation. I enjoy researching and building solutions.</p>
+      <p>My work spans security tooling (log analysis, intrusion detection concepts) and AI-assisted automation. I build things that solve real problems.</p>
     </div>
     <div class="stat-grid">
       <div class="stat">
@@ -231,7 +231,7 @@
         <div class="stat-label">Veteran</div>
       </div>
       <div class="stat">
-        <div class="stat-num">5</div>
+        <div class="stat-num">6</div>
         <div class="stat-label">Projects on GitHub</div>
       </div>
       <div class="stat">
@@ -286,6 +286,22 @@
   <h2>What I've Built</h2>
   <!-- Row 1: 3 main projects -->
   <div class="projects-grid">
+
+    <a class="project-card" href="https://github.com/roccopaz/mission-control" target="_blank" onclick="event.preventDefault(); document.getElementById('mc-modal').style.display='flex'">
+      <div class="proj-header">
+        <div class="proj-icon">🏢</div>
+        <span class="proj-lang">AI · Dashboard</span>
+      </div>
+      <div class="proj-name">Mission Control Dashboard</div>
+      <div class="proj-desc">Custom AI ops hub — agent status, revenue P&L, content calendar, trending intel. Live APIs: Amazon SP-API, YNAB, Brave Search, Postiz. Built with Claude Code + OpenClaw.</div>
+      <div class="tag-row">
+        <span class="tag">Claude Code</span>
+        <span class="tag">AI-Assisted Dev</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">HTML/CSS/JS</span>
+      </div>
+      <div class="proj-link">github.com/roccopaz/mission-control ↗</div>
+    </a>
 
     <a class="project-card" href="https://github.com/roccopaz/log-analyzer" target="_blank">
       <div class="proj-header">
@@ -367,6 +383,57 @@
     </div>
 
 
+
+    <!-- MISSION CONTROL MODAL -->
+    <div id="mc-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)this.style.display='none'">
+      <div style="background:#13131a;border:1px solid #2a2a3a;border-radius:20px;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:36px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;">
+          <div>
+            <div style="font-size:36px;margin-bottom:8px;">🏢</div>
+            <h3 style="font-size:22px;font-weight:800;margin-bottom:4px;">Mission Control Dashboard</h3>
+            <span style="font-size:12px;background:rgba(201,168,76,.1);color:#C9A84C;padding:3px 10px;border-radius:6px;">AI-Assisted Dev · REST APIs · Dashboard</span>
+          </div>
+          <button onclick="document.getElementById('mc-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
+        </div>
+        <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">A full-featured dark-mode operations dashboard built using <strong style="color:#e8e8f0;">AI-assisted development</strong> with Claude Code and OpenClaw — monitoring AI agents, projects, revenue, and content pipelines in one place.</p>
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔌 Live API Integrations</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:14px;"><div style="font-weight:700;color:#e8e8f0;margin-bottom:4px;">Amazon SP-API</div><div style="font-size:12px;color:#94a3b8;">Live units sold, orders, and revenue from MODTECH FBA</div></div>
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:14px;"><div style="font-weight:700;color:#e8e8f0;margin-bottom:4px;">YNAB Budgeting API</div><div style="font-size:12px;color:#94a3b8;">Expense tracking and automatic net P&L calculation</div></div>
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:14px;"><div style="font-weight:700;color:#e8e8f0;margin-bottom:4px;">Brave Search API</div><div style="font-size:12px;color:#94a3b8;">Trending intel feed — AI news, market signals, video ideas</div></div>
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:14px;"><div style="font-weight:700;color:#e8e8f0;margin-bottom:4px;">Postiz API</div><div style="font-size:12px;color:#94a3b8;">Content calendar — scheduled and published posts across platforms</div></div>
+          </div>
+        </div>
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">💡 How It Was Built</div>
+          <ul style="color:#94a3b8;font-size:14px;line-height:2;padding-left:18px;">
+            <li>Built using <strong style="color:#e8e8f0;">AI-assisted development</strong> with Claude Code (Anthropic) + OpenClaw orchestration</li>
+            <li>Applied prompt engineering and iterative refinement — directing Claude Sonnet, Opus, and Codex for different tasks</li>
+            <li>Deliberate model selection: Sonnet for speed, Opus for complex reasoning, Codex for code generation</li>
+            <li>1,200+ lines of self-contained HTML/CSS/JS — no framework, no build step</li>
+          </ul>
+        </div>
+        <div style="margin-bottom:24px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Claude Code</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">OpenClaw</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">HTML5 / CSS3 / JS</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Amazon SP-API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">YNAB API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Brave Search API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Postiz API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">REST APIs</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://roccopaz.github.io/mission-control/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#8B1A1A;color:#fff;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">Live Demo ↗</a>
+          <a href="https://roccopaz.github.io/mission-control/preview.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid #2e1018;color:#C9A84C;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">Preview ↗</a>
+          <a href="https://github.com/roccopaz/mission-control" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid #2e1018;color:#e8e8f0;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
 
     <!-- CONTENT PIPELINE MODAL -->
     <div id="content-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)this.style.display='none'">
