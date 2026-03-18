@@ -231,7 +231,7 @@
         <div class="stat-label">Veteran</div>
       </div>
       <div class="stat">
-        <div class="stat-num">6</div>
+        <div class="stat-num">7</div>
         <div class="stat-label">Projects on GitHub</div>
       </div>
       <div class="stat">
@@ -333,6 +333,22 @@
       </div>
       <div class="proj-link">github.com/roccopaz/python-password-strength-checker ↗</div>
     </a>
+
+    <div class="project-card" style="cursor:pointer;" onclick="document.getElementById('cw-modal').style.display='flex'">
+      <div class="proj-header">
+        <div class="proj-icon">📡</div>
+        <span class="proj-lang">AI Agents · Automation</span>
+      </div>
+      <div class="proj-name">Content Research Workflow</div>
+      <div class="proj-desc">Multi-agent pipeline where an AI research agent delivers daily trend briefs and a content agent converts them into TikTok/YouTube Shorts concepts — fully automated via cron. <span style="color:var(--accent2);">Click to learn more →</span></div>
+      <div class="tag-row">
+        <span class="tag">Multi-Agent AI</span>
+        <span class="tag">Brave Search API</span>
+        <span class="tag">Cron Scheduling</span>
+        <span class="tag">Discord API</span>
+      </div>
+      <div class="proj-link"><a href="https://github.com/roccopaz/content-research-workflow" target="_blank" style="color:var(--accent2);text-decoration:none;">github.com/roccopaz/content-research-workflow ↗</a></div>
+    </div>
 
     <div class="project-card" style="cursor:pointer;" onclick="document.getElementById('openclaw-modal').style.display='flex'">
       <div class="proj-header">
@@ -566,6 +582,77 @@
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Defense in Depth</span>
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">DevSecOps</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT RESEARCH WORKFLOW MODAL -->
+    <div id="cw-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)this.style.display='none'">
+      <div style="background:#13131a;border:1px solid #2a2a3a;border-radius:20px;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:36px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;">
+          <div>
+            <div style="font-size:36px;margin-bottom:8px;">📡</div>
+            <h3 style="font-size:22px;font-weight:800;margin-bottom:4px;">Content Research Workflow</h3>
+            <span style="font-size:12px;background:rgba(201,168,76,.1);color:#C9A84C;padding:3px 10px;border-radius:6px;">Multi-Agent AI · Automation · Short-Form Content</span>
+          </div>
+          <button onclick="document.getElementById('cw-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
+        </div>
+
+        <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">A production <strong style="color:#e8e8f0;">multi-agent AI pipeline</strong> that automates the full research → content workflow. Two specialized AI agents run daily on a cron schedule — one gathering trend intelligence, the other converting it into ready-to-produce short-form concepts for <a href="https://www.tiktok.com/@techmotivates" target="_blank" style="color:#C9A84C;">@techmotivates</a> on TikTok and YouTube Shorts.</p>
+
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🤖 Agent Roles</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:16px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="font-size:18px;">🤖</span>
+                <div style="font-weight:700;color:#e8e8f0;">Robo — Research Agent</div>
+                <span style="font-size:10px;background:rgba(139,26,26,.3);color:#C9A84C;padding:2px 8px;border-radius:4px;font-weight:700;">8:00 AM CST daily</span>
+              </div>
+              <div style="font-size:13.5px;color:#94a3b8;">Runs trend discovery using Brave Search API — identifies rising themes, best athlete/artist/speech angles, competitor patterns, and what to avoid. Publishes a structured Daily Trend Pulse to Discord as a handoff to Star.</div>
+            </div>
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:16px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="font-size:18px;">⭐</span>
+                <div style="font-weight:700;color:#e8e8f0;">Star — Content Agent</div>
+                <span style="font-size:10px;background:rgba(139,26,26,.3);color:#C9A84C;padding:2px 8px;border-radius:4px;font-weight:700;">8:15 AM CST daily</span>
+              </div>
+              <div style="font-size:13.5px;color:#94a3b8;">Picks up Robo's brief and converts it into ranked short-form concepts — hooks, on-screen text, captions, edit direction. Publishes a Daily Content Pack with immediate/weekly/evergreen buckets.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔄 Daily Flow</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:#94a3b8;">
+            <span style="background:#0a0005;border:1px solid #2e1018;padding:6px 12px;border-radius:8px;">Brave Search API</span>
+            <span style="color:#C9A84C;">→</span>
+            <span style="background:#0a0005;border:1px solid #2e1018;padding:6px 12px;border-radius:8px;">Robo Trend Pulse</span>
+            <span style="color:#C9A84C;">→</span>
+            <span style="background:#0a0005;border:1px solid #2e1018;padding:6px 12px;border-radius:8px;">Star Content Pack</span>
+            <span style="color:#C9A84C;">→</span>
+            <span style="background:#0a0005;border:1px solid #2e1018;padding:6px 12px;border-radius:8px;">Discord delivery</span>
+            <span style="color:#C9A84C;">→</span>
+            <span style="background:#0a0005;border:1px solid #2e1018;padding:6px 12px;border-radius:8px;">@techmotivates</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🔧 Tech Stack</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Claude AI (Sonnet + Opus)</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">OpenClaw</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Brave Search API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Discord API</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Cron Scheduler</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Persistent Memory</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Linux VPS</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://github.com/roccopaz/content-research-workflow" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#8B1A1A;color:#fff;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">View Repo ↗</a>
+          <a href="https://www.tiktok.com/@techmotivates" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid #2e1018;color:#C9A84C;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;">@techmotivates ↗</a>
         </div>
       </div>
     </div>
