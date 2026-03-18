@@ -459,37 +459,59 @@
           </div>
           <button onclick="document.getElementById('security-modal').style.display='none'" style="background:none;border:1px solid #2a2a3a;color:#64748b;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:16px;">✕</button>
         </div>
-        <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">When deploying AI systems that interact with real accounts and APIs, security is not optional. I applied <strong style="color:#e8e8f0;">service identity isolation</strong> — a core DevSecOps principle — to keep personal credentials completely separate from the AI infrastructure.</p>
-        <div style="margin-bottom:22px;">
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🛡️ What I Implemented</div>
+        <p style="color:#94a3b8;font-size:15px;line-height:1.8;margin-bottom:20px;">When deploying an always-on AI system that interacts with real accounts and APIs, security cannot be an afterthought. I designed a <strong style="color:#e8e8f0;">layered security architecture</strong> using the same principles found in enterprise DevSecOps environments.</p>
+
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">🛡️ Security Layers</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:16px;">
-              <div style="font-weight:700;color:#e8e8f0;margin-bottom:6px;">Dedicated Service Account</div>
-              <div style="font-size:13.5px;color:#94a3b8;">Created a separate Google account exclusively for the AI system. Personal email and data are never exposed to the AI runtime — even if credentials were compromised, the blast radius is fully contained.</div>
+
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:16px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="background:rgba(139,26,26,.3);color:#C9A84C;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">LAYER 1</span>
+                <div style="font-weight:700;color:#e8e8f0;">Tailscale VPN (Zero Trust Networking)</div>
+              </div>
+              <div style="font-size:13.5px;color:#94a3b8;">The VPS runs <strong style="color:#e8e8f0;">Tailscale</strong> — a WireGuard-based mesh VPN. All admin access tunnels through Tailscale, meaning <em>no SSH port is exposed to the public internet</em>. The server is invisible to external scanners. Eliminates brute-force attacks at the network level.</div>
             </div>
-            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:16px;">
-              <div style="font-weight:700;color:#e8e8f0;margin-bottom:6px;">Scoped OAuth Permissions (Least Privilege)</div>
-              <div style="font-size:13.5px;color:#94a3b8;">Each Google API (Drive, Docs, Sheets) authorized independently with only the minimum required scopes. Gmail access intentionally excluded from the service account — AI cannot read or send personal email.</div>
+
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:16px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="background:rgba(139,26,26,.3);color:#C9A84C;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">LAYER 2</span>
+                <div style="font-weight:700;color:#e8e8f0;">Service Identity Isolation</div>
+              </div>
+              <div style="font-size:13.5px;color:#94a3b8;">Dedicated Google account created exclusively for the AI system. Personal email and data are never exposed to the AI runtime — even if service credentials were compromised, the blast radius is fully contained.</div>
             </div>
-            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:16px;">
-              <div style="font-weight:700;color:#e8e8f0;margin-bottom:6px;">Encrypted Credential Storage</div>
-              <div style="font-size:13.5px;color:#94a3b8;">OAuth tokens stored via encrypted keyring (file-based backend) on the VPS. Tokens never stored in plaintext or committed to version control.</div>
+
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:16px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="background:rgba(139,26,26,.3);color:#C9A84C;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">LAYER 3</span>
+                <div style="font-weight:700;color:#e8e8f0;">Scoped OAuth Permissions (Least Privilege)</div>
+              </div>
+              <div style="font-size:13.5px;color:#94a3b8;">Drive, Docs, and Sheets APIs each authorized with minimum required scopes. Gmail <strong style="color:#e8e8f0;">intentionally excluded</strong> — the AI cannot read or send personal email by design.</div>
             </div>
-            <div style="background:#0a0a0f;border:1px solid #1e1e2e;border-radius:10px;padding:16px;">
-              <div style="font-weight:700;color:#e8e8f0;margin-bottom:6px;">API Key Segmentation</div>
-              <div style="font-size:13.5px;color:#94a3b8;">Anthropic (Claude) and OpenAI API keys stored as environment variables — isolated from the codebase and rotatable without system downtime.</div>
+
+            <div style="background:#0a0005;border:1px solid #2e1018;border-radius:10px;padding:16px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="background:rgba(139,26,26,.3);color:#C9A84C;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">LAYER 4</span>
+                <div style="font-weight:700;color:#e8e8f0;">Encrypted Credential Storage</div>
+              </div>
+              <div style="font-size:13.5px;color:#94a3b8;">OAuth tokens stored via encrypted keyring backend on the VPS — password-protected, never plaintext, never committed to version control. API keys (Anthropic, OpenAI) stored as environment variables, isolated from codebase.</div>
             </div>
+
           </div>
         </div>
+
         <div>
-          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">📚 Security Concepts Demonstrated</div>
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8B1A1A;font-weight:700;margin-bottom:12px;">📚 Concepts Demonstrated</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Principle of Least Privilege</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Zero Trust Networking</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Tailscale VPN</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">WireGuard</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Least Privilege</span>
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Service Identity Isolation</span>
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">OAuth 2.0</span>
-            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Credential Management</span>
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Blast Radius Containment</span>
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Secrets Hygiene</span>
+            <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">Defense in Depth</span>
             <span style="background:rgba(201,168,76,.1);color:#C9A84C;padding:4px 11px;border-radius:6px;font-size:12px;">DevSecOps</span>
           </div>
         </div>
